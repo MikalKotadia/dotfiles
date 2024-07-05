@@ -98,7 +98,7 @@ local plugins = {
         event = "VeryLazy",
         config = function()
             require("gp").setup{
-                openai_api_key = {"op", "item", "get", "chatgpt", "--fields", "credential"},
+                openai_api_key = { 'pass', "show", "API/chatgpt" },
             }
 
             -- or setup with your own config (see Install > Configuration in Readme)
