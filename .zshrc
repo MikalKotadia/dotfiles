@@ -101,10 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(zoxide init --cmd cd zsh)"
 
-export AWS_DEFAULT_PROFILE=DevelopersAccess-586518255992
-
-# Added by talos
-export PATH="$PATH:/Users/mikalkotdia/Developer/dev-tools/bin"
 alias newdb="nvim $HOME/.config/gobang/config.toml"
 alias nv="nvim ."
 alias gb="gobang"
