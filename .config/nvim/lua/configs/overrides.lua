@@ -54,6 +54,7 @@ M.mason = {
         "pyright",
         -- java
         "jdtls",
+        "json-lsp",
 
         "dockerfile-language-server",
         "gopls",
@@ -72,6 +73,7 @@ M.lsp_servers = {
     "jdtls",
     "dockerls",
     "gopls",
+    "jsonls",
 }
 
 M.formatters = {
