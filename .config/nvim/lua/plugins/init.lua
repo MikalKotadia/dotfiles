@@ -97,14 +97,41 @@ local plugins = {
         "robitx/gp.nvim",
         event = "VeryLazy",
         config = function()
-            require("gp").setup{
-                openai_api_key = { 'pass', "show", "API/chatgpt" },
+            require("gp").setup {
+                -- update both branches to use bw
+                openai_api_key = { "op", "item", "get", "chatgpt", "--fields", "credential" },
+                providers = {
+                    googleai = {
+                        disable = false,
+                        endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
+                        secret = { "op", "item", "get", "gemini", "--fields", "credential" },
+                    },
+                },
+                agents = {
+                    {
+                        name = "ChatGPT3-5",
+                        disable = true,
+                    },
+                    {
+                        provider = "openai",
+                        name = "ChatGPT4o-mini",
+                        chat = true,
+                        command = true,
+                        model = { model = "gpt-4o-mini", temperature = 1.1, top_p = 1 },
+                        system_prompt = require("gp.defaults").chat_system_prompt,
+                    },
+                    {
+                        provider = "googleai",
+                        name = "ChatGemini",
+                        chat = true,
+                        command = true,
+                        disable = false,
+                        model = { model = "gemini-pro", temperature = 1.1, top_p = 1 },
+                        -- system prompt (use this to specify the persona/role of the AI)
+                        system_prompt = require("gp.defaults").chat_system_prompt,
+                    },
+                },
             }
-
-            -- or setup with your own config (see Install > Configuration in Readme)
-            -- require("gp").setup(config)
-
-            -- shortcuts might be setup here (see Usage > Shortcuts in Readme)
         end,
     },
     -- this is not working rn, look into this
@@ -112,7 +139,7 @@ local plugins = {
         "nvim-treesitter/nvim-treesitter-context",
         lazy = false,
         config = function()
-            require("treesitter-context").setup{
+            require("treesitter-context").setup {
                 -- enable = true
                 enable = false
             }
