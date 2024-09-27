@@ -95,6 +95,7 @@ local plugins = {
     },
     {
         "numToStr/Comment.nvim",
+        lazy = false,
         config = function()
             require("Comment").setup {
                 -- pre_hook = function()
@@ -145,17 +146,6 @@ local plugins = {
             }
         end,
     },
-    -- this is not working rn, look into this
-    {
-        "nvim-treesitter/nvim-treesitter-context",
-        lazy = false,
-        config = function()
-            require("treesitter-context").setup {
-                -- enable = true
-                enable = false
-            }
-        end
-    },
     {
         "folke/todo-comments.nvim",
         lazy = false,
@@ -180,28 +170,6 @@ local plugins = {
             vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
         end
     },
-    -- {
-    --     "nvim-treesitter/nvim-treesitter-textobjects",
-    --     version = false,
-    --     event = "VeryLazy",
-    --     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    --     config = function()
-    --         require("nvim-treesitter.configs").setup {
-    --             textobjects = {
-    --                 select = {
-    --                     enable = true,
-    --                     lookahead = true,
-    --                     keymaps = {
-    --                         ["af"] = "@function.outer",
-    --                         ["if"] = "@function.inner",
-    --                         ["ac"] = "@class.outer",
-    --                         ["ic"] = "@class.inner",
-    --                     },
-    --                 },
-    --             },
-    --         }
-    --     end
-    -- }
 }
 
 return plugins

@@ -64,7 +64,7 @@ M.mason = {
 M.lsp_servers = {
     "html",
     "cssls",
-    "tsserver",
+    "ts_ls",
     "clangd",
     "pyright",
     "marksman",
