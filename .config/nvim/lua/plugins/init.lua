@@ -68,11 +68,22 @@ local plugins = {
     },
     {
         "kdheepak/lazygit.nvim",
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
         -- optional for floating window border decoration
-        event = "VeryLazy",
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
+        -- setting the keybinding for LazyGit with 'keys' is recommended in
+        -- order to load the plugin when the command is run for the first time
+        keys = {
+            { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        }
     },
     {
         "JoosepAlviste/nvim-ts-context-commentstring",
@@ -169,28 +180,28 @@ local plugins = {
             vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
         end
     },
-    {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        version = false,
-        event = "VeryLazy",
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-        config = function()
-            require("nvim-treesitter.configs").setup {
-                textobjects = {
-                    select = {
-                        enable = true,
-                        lookahead = true,
-                        keymaps = {
-                            ["af"] = "@function.outer",
-                            ["if"] = "@function.inner",
-                            ["ac"] = "@class.outer",
-                            ["ic"] = "@class.inner",
-                        },
-                    },
-                },
-            }
-        end
-    }
+    -- {
+    --     "nvim-treesitter/nvim-treesitter-textobjects",
+    --     version = false,
+    --     event = "VeryLazy",
+    --     dependencies = { "nvim-treesitter/nvim-treesitter" },
+    --     config = function()
+    --         require("nvim-treesitter.configs").setup {
+    --             textobjects = {
+    --                 select = {
+    --                     enable = true,
+    --                     lookahead = true,
+    --                     keymaps = {
+    --                         ["af"] = "@function.outer",
+    --                         ["if"] = "@function.inner",
+    --                         ["ac"] = "@class.outer",
+    --                         ["ic"] = "@class.inner",
+    --                     },
+    --                 },
+    --             },
+    --         }
+    --     end
+    -- }
 }
 
 return plugins
