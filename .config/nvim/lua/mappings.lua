@@ -59,7 +59,7 @@ map("n", "<leader>rp", ':!python "%"<cr>', { desc = "Run current python file" })
 map("n", "<leader>col", ':!pdflatex "%"<cr>', { desc = "Compile current latex file"})
 map("n", "<leader>com", ':!pandoc "%" -o "%:r"<cr>', { desc = "Compile current markdown file"})
 
-map("n", "<leader>gpt", ':GpChatToggle<cr>', { desc = "Open GPT"})
+map("n", "<leader>gpt", ':call codeium#Chat()<cr>', { desc = "Open Codeium Chat"})
 
 -- Defaults
 map("n", "<A-i>", function()
