@@ -58,6 +58,7 @@ M.mason = {
 
         "dockerfile-language-server",
         "gopls",
+        "lemminx",
     },
 }
 
@@ -74,6 +75,7 @@ M.lsp_servers = {
     "dockerls",
     "gopls",
     "jsonls",
+    "lemminx",
 }
 
 M.formatters = {
