@@ -104,15 +104,21 @@ eval "$(zoxide init --cmd cd zsh)"
 alias newdb="nvim $HOME/.config/gobang/config.toml"
 alias nv="nvim ."
 alias gb="gobang"
-alias reload="source ~/.zshrc"
+alias reload="source ~/.zshrc && source ~/.zprofile"
 alias erc="nvim ~/.zshrc"
+alias epr="nvim ~/.zprofile"
 
 alias lg="lazygit"
 alias ld="lazydocker"
 
+# node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# java version manager
+export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
 
 # Enable vi mode
 bindkey -v

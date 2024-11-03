@@ -120,6 +120,28 @@ local plugins = {
             vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
         end
     },
+    {
+        'nvim-flutter/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+        config = true
+    },
+    {
+        "nvim-telescope/telescope.nvim",
+        config = function()
+            local config = require('nvchad.configs.telescope')
+            local actions = require('telescope.actions')
+            config.defaults.mappings["i"] = {
+                ["<C-j>"] = actions.move_selection_next,
+                ["<C-k>"] = actions.move_selection_previous,
+            }
+            require('telescope').setup(config)
+
+        end
+    },
 }
 
 return plugins
