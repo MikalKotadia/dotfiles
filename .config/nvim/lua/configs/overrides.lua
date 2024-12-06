@@ -17,6 +17,7 @@ M.treesitter = {
         "php",
         "go",
         "json",
+        "twig",
     },
     indent = {
         enable = true,
@@ -39,6 +40,7 @@ M.mason = {
         "eslint_d",
         "intelephense",
         "prettier",
+        "twiggy-language-server",
 
         -- c/cpp stuff
         "clangd",
@@ -76,6 +78,8 @@ M.lsp_servers = {
     "gopls",
     "jsonls",
     "lemminx",
+    "twiggy_language_server",
+    "bashls",
 }
 
 M.formatters = {
