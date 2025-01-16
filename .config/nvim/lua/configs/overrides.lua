@@ -18,6 +18,7 @@ M.treesitter = {
         "go",
         "json",
         "twig",
+        "yaml",
     },
     indent = {
         enable = true,
@@ -61,6 +62,7 @@ M.mason = {
         "dockerfile-language-server",
         "gopls",
         "lemminx",
+        "yaml-language-server",
     },
 }
 
@@ -80,6 +82,7 @@ M.lsp_servers = {
     "lemminx",
     "twiggy_language_server",
     "bashls",
+    "yamlls"
 }
 
 M.formatters = {
