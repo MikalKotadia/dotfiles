@@ -12,6 +12,11 @@ map("n", "<leader>lg", ":LazyGit<cr>", { desc = "Open LazyGit" })
 map("n", "<leader>fs", function()
   require('telescope.builtin').lsp_document_symbols({ symbols={'function', 'class', 'method'} })
 end, { desc = "Telescope Find Symbols" })
+
+map("n", "<leader>fv", function()
+  require('telescope.builtin').lsp_document_symbols({ symbols={'variables'} })
+end, { desc = "Telescope Find Variables" })
+
 map("n", "<leader>fg", ":Telescope git_files<cr>", { desc = "Telescope Find Git Files" })
 map("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Telescope Find Files" })
 map("n", "<leader>fe", ":Telescope diagnostics<cr>", { desc = "Telescope LSP Diagnostics" })
