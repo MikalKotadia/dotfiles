@@ -12,6 +12,8 @@ opt.smartindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 
+opt.spell = true
+
 -- don't add comment on new line
 vim.cmd [[autocmd FileType * set formatoptions-=ro]]
 

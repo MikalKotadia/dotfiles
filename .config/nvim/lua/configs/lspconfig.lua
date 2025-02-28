@@ -16,7 +16,14 @@ for _, lsp in ipairs(servers) do
         {
             on_attach = on_attach,
             capabilities = capabilities,
+            root_dir = require("lspconfig").util.root_pattern(".git")
         }
+
+    -- if lsp == 'intelephense' then
+    --     table.insert(setup_table, {
+    --     })
+    -- end
+
     lspconfig[lsp].setup(setup_table)
 
 end
