@@ -127,3 +127,5 @@ bindkey -v
 export PATH="$PATH:/Users/mikalkotdia/go/bin"
 
 eval $(thefuck --alias)
+# make k9s use neovim
+export K9S_EDITOR="nvim"
