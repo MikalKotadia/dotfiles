@@ -7,19 +7,38 @@ local plugins = {
 
     {
         "neovim/nvim-lspconfig",
-        dependencies = {
-            -- format & linting
-            {
-                "jose-elias-alvarez/null-ls.nvim",
-                config = function()
-                    require "configs.null-ls"
-                end,
-            },
-        },
         config = function()
             require('nvchad.configs.lspconfig').defaults()
             require "configs.lspconfig"
-        end, -- Override to setup mason-lspconfig
+        end,
+    },
+
+    {
+        "stevearc/conform.nvim",
+        lazy = true,
+        ft = vim.tbl_keys(overrides.linters_by_ft),
+        opts = {
+            formatters_by_ft = overrides.linters_by_ft,
+        },
+    },
+
+    {
+        "mfussenegger/nvim-lint",
+        lazy = true,
+        ft = vim.tbl_keys(overrides.linters_by_ft),
+        config = function()
+            local lint = require("lint")
+
+            -- Use shared linters
+            lint.linters_by_ft = overrides.linters_by_ft
+
+            -- Auto-run linting on save & text change
+            vim.api.nvim_create_autocmd({ "BufWritePost", "TextChanged", "InsertLeave" }, {
+                callback = function()
+                    lint.try_lint()
+                end,
+            })
+        end,
     },
 
     -- override plugin configs
@@ -27,7 +46,6 @@ local plugins = {
         "williamboman/mason.nvim",
         opts = overrides.mason,
     },
-
     {
         "nvim-treesitter/nvim-treesitter",
         opts = overrides.treesitter,
@@ -139,7 +157,6 @@ local plugins = {
                 ["<C-k>"] = actions.move_selection_previous,
             }
             require('telescope').setup(config)
-
         end
     },
 }

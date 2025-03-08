@@ -22,47 +22,6 @@ M.treesitter = {
     },
     indent = {
         enable = true,
-        -- disable = {
-        --   "python"
-        -- },
-    },
-}
-
-M.mason = {
-    ensure_installed = {
-        -- lua stuff
-        "lua-language-server",
-        "stylua",
-
-        -- web dev stuff
-        "css-lsp",
-        "html-lsp",
-        "typescript-language-server",
-        "eslint_d",
-        "intelephense",
-        "prettier",
-        "twiggy-language-server",
-
-        -- c/cpp stuff
-        "clangd",
-        "clang-format",
-
-        -- misc
-        "ast-grep",
-        "jdtls",
-        "texlab",
-
-        -- python
-        "pylint",
-        "pyright",
-        -- java
-        "jdtls",
-        "json-lsp",
-
-        "dockerfile-language-server",
-        "gopls",
-        "lemminx",
-        "yaml-language-server",
     },
 }
 
@@ -82,20 +41,17 @@ M.lsp_servers = {
     "lemminx",
     "twiggy_language_server",
     "bashls",
-    "yamlls"
+    "yamlls",
+    "vuels"
 }
 
-M.formatters = {
-    formatters_by_ft = {
+M.linters_by_ft = {
         lua = { "stylua" },
-        -- Conform will run multiple formatters sequentially
-        python = { { "autopep8" } },
-        -- Use a sub-list to run only the first available formatter
-        javascript = { { "eslint_d" } },
-        typescript = { { "eslint_d" } },
-        javascriptreact = { { "eslint_d" } },
-        typescriptreact = { { "eslint_d" } },
-    },
+        javascript = { "eslint_d" },
+        typescript = { "eslint_d" },
+        javascriptreact = { "eslint_d" },
+        typescriptreact = { "eslint_d" },
+        python = { "flake8" },
 }
 
 -- git support in nvimtree
