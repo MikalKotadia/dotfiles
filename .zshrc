@@ -127,5 +127,10 @@ bindkey -v
 export PATH="$PATH:/Users/mikalkotdia/go/bin"
 
 eval $(thefuck --alias)
+
 # make k9s use neovim
 export K9S_EDITOR="nvim"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
