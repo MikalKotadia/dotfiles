@@ -2,17 +2,6 @@ local overrides = require "configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
-
-    -- Override plugin definition options
-
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            require('nvchad.configs.lspconfig').defaults()
-            require "configs.lspconfig"
-        end,
-    },
-
     {
         "stevearc/conform.nvim",
         lazy = true,
@@ -56,7 +45,6 @@ local plugins = {
         opts = overrides.nvimtree,
     },
 
-    -- In order to modify the `lspconfig` configuration:
     {
         "neovim/nvim-lspconfig",
         config = function()

@@ -46,7 +46,7 @@ M.lsp_servers = {
 }
 
 M.linters_by_ft = {
-        lua = { "stylua" },
+        -- lua = { "stylua" },
         javascript = { "eslint_d" },
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
