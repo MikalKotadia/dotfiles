@@ -103,10 +103,11 @@ eval "$(zoxide init --cmd cd zsh)"
 
 alias newdb="nvim $HOME/.config/gobang/config.toml"
 alias nv="nvim ."
-alias gb="gobang"
+alias ytdl="yt-dlp"
 alias reload="source ~/.zshrc && source ~/.zprofile"
 alias erc="nvim ~/.zshrc"
 alias epr="nvim ~/.zprofile"
+alias cb="./stop && ./build && ./start"
 
 alias lg="lazygit"
 alias ld="lazydocker"
