@@ -4,9 +4,8 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
-   theme = "nightowl",
-   transparency = true,
+M.base46 = {
+  theme = "tokyonight",
 }
 
 return M
