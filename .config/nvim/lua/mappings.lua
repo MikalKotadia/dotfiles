@@ -77,6 +77,7 @@ end, { desc = "Terminal toggle floating" })
 
 -- misc
 map("n", "<leader>ax", ":bufdo bwipeout<cr>", { desc = "Buffer Close All" })
+map("n", "<leader>gb", ":G blame_line<cr>", { desc = "Git Blame Line" })
 
 
 -- Disable mappings
