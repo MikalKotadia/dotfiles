@@ -136,4 +136,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export GEMINI_API_KEY=$(op read "op://Employee/gemini/credential")
+set -a; source ~/.env; set +a
+
+source <(bws secret get $GEMINI_API_TOKEN_ID --output env | sed 's/^/export /')
+# export $(bws secret get $GEMINI_API_TOKEN_ID --output env)
