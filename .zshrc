@@ -136,7 +136,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+alias getedm="spotdl 'https://open.spotify.com/playlist/73wKpsB2MJ2pvClK61XPNM?si=36ad7bedf8a04656' --bitrate 128k"
+
 set -a; source ~/.env; set +a
 
 source <(bws secret get $GEMINI_API_TOKEN_ID --output env | sed 's/^/export /')
 # export $(bws secret get $GEMINI_API_TOKEN_ID --output env)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
