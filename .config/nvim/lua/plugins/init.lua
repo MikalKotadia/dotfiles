@@ -1,5 +1,5 @@
 local overrides = require "configs.overrides"
-local llm = require "configs.llm"
+local llm_providers = require "configs.llm"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -158,7 +158,13 @@ local plugins = {
     "yetone/avante.nvim",
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
-    opts = llm.gemini,
+    opts = {
+            provider = "gemini",
+            providers = llm_providers,
+            -- behaviours = {
+            --     auto_suggestions = true
+            -- }
+        },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
     -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
