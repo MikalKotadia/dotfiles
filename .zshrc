@@ -125,7 +125,7 @@ export PATH="$HOME/.jenv/bin:$PATH"
 bindkey -v
 
 # adding the go binaries to path
-export PATH="$PATH:/Users/mikalkotdia/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 eval $(thefuck --alias)
 
