@@ -158,12 +158,12 @@ local plugins = {
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
     opts = {
-            provider = "gemini",
-            providers = llm_providers,
-            -- behaviours = {
-            --     auto_suggestions = true
-            -- }
-        },
+      provider = "gemini",
+      providers = llm_providers,
+      -- behaviours = {
+      --     auto_suggestions = true
+      -- }
+    },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
     -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
@@ -205,6 +205,15 @@ local plugins = {
         ft = { "markdown", "Avante" },
       },
     },
+  },
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy", -- Or `LspAttach`
+    priority = 1000, -- needs to be loaded in first
+    config = function()
+      require("tiny-inline-diagnostic").setup()
+      vim.diagnostic.config { virtual_text = false } -- Only if needed in your configuration, if you already have native LSP diagnostics
+    end,
   },
 }
 
