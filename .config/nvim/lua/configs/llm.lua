@@ -1,27 +1,21 @@
 local M = {}
 
-
 M.gemini = {
-  provider = "gemini",
-  behaviour = {
-    -- auto_suggestions = true,
-    auto_set_highlight_group = true,
-    auto_set_keymaps = true,
-    auto_apply_diff_after_generation = false,
-    support_paste_from_clipboard = false,
-  },
-  gemini = {
-    model = "gemini-2.0-flash",
+  endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+  model = "gemini-2.5-flash",
+  extra_request_body = {
     temperature = 0,
     max_tokens = 50000,
   },
-  -- inline_suggestions = {
-  --   enabled = true,
-  --   keymap = {
-  --     accept = "<C-g>",
-  --     dismiss = "<C-]>",
-  --   },
-  -- },
+}
+
+M.bedrock = {
+  model = "anthropic.claude-3-sonnet-20240229-v1:0",
+  aws_region = "ca-central-1",
+  extra_request_body = {
+    temperature = 0,
+    max_tokens = 50000,
+  },
 }
 
 return M

@@ -158,8 +158,9 @@ local plugins = {
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
     opts = {
-      provider = "gemini",
       providers = llm_providers,
+      provider = "gemini",
+      -- auto_suggestions_provider = "gemini",
       -- behaviours = {
       --     auto_suggestions = true
       -- }
