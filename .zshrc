@@ -141,7 +141,9 @@ alias getedm="spotdl 'https://open.spotify.com/playlist/73wKpsB2MJ2pvClK61XPNM?s
 set -a; source ~/.env; set +a
 
 source <(bws secret get $GEMINI_API_TOKEN_ID --output env | sed 's/^/export /')
-# export $(bws secret get $GEMINI_API_TOKEN_ID --output env)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+alias oc="opencode"
+
+export EDITOR=nvim

@@ -1,9 +1,12 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "theme": "tokyonight",
-  "model": "anthropic/claude-sonnet-4-20250514",
-  "layout": "stretch",
-  "autoupdate": true,
-  "log_level": "INFO",
+    "$schema": "https://opencode.ai/config.json",
+    "theme": "tokyonight",
+    "model": "anthropic/claude-sonnet-4-20250514",
+    "layout": "stretch",
+    "autoupdate": true,
+    "permission": {
+        "edit": "ask",
+        "bash": "ask"
+    },
   "keybinds": {}
 }
