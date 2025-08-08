@@ -8,5 +8,18 @@
         "edit": "ask",
         "bash": "ask"
     },
+    "agent": {
+        "review": {
+            "description": "Reviews code for best practices and potential issues",
+            "mode": "primary",
+            "model": "anthropic/claude-sonnet-4-20250514",
+            "temperature": 0,
+            "prompt": "{file:./prompts/reviewer.md}",
+            "tools": {
+                "write": false,
+                "edit": false
+            }
+        }
+    },
   "keybinds": {}
 }
