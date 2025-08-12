@@ -19,6 +19,23 @@
                 "write": false,
                 "edit": false
             }
+        },
+        "document": {
+            "description": "Documentation generator",
+            "mode": "primary",
+            "model": "anthropic/claude-sonnet-4-20250514",
+            "temperature": 0,
+            "prompt": "{file:./prompts/documentation.md}",
+            "tools": {
+                "edit": true
+            }
+        }
+    },
+    "mcp": {
+        "context7": {
+            "type": "remote",
+            "url": "https://mcp.context7.com/mcp",
+            "enabled": true
         }
     },
   "keybinds": {}
