@@ -61,7 +61,7 @@ After analysis, categorize the code as either:
 ## Output Format
 
 ### For APPROVED Code:
-Generate a PR template with extracted information:
+Generate a PR template with extracted information and return the RAW MARKDOWN:
 
 ```markdown
 # 📋 Description:
