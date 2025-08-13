@@ -2,4 +2,4 @@
 
 ## Framework Documentation
 
-For ANY framework questions, use context7 to look up documentation.
+For ANY framework or library questions, use context7 to look up documentation.
