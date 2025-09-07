@@ -36,6 +36,7 @@ Evaluate the code changes across these dimensions:
 - Verify indentation, spacing, and bracket placement match project standards
 - Ensure imports/includes are organized consistently
 - Validate comment style and documentation patterns
+- Look for any spelling errors introduced
 
 #### Security Analysis
 - **Injection Vulnerabilities**: Look for SQL injection, XSS, command injection, path traversal
@@ -51,6 +52,10 @@ Evaluate the code changes across these dimensions:
 - Look for database query optimization opportunities (N+1 problems, missing indexes)
 - Review caching strategies and data structure choices
 - Flag blocking operations that could be asynchronous
+
+#### Amazon Q Analysis
+- Look at all of the code again as if you are the Amazon Q reviewer on github
+- Identify points where Amazon Q would want to change the code
 
 ### 3. Decision Making
 
