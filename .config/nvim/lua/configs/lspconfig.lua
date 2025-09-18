@@ -1,7 +1,4 @@
-
--- local capabilities = require ("nvchad.configs.lspconfig").capabilities
 local diagnostic = require "vim.diagnostic"
-local lspconfig = require "lspconfig"
 local servers = require ("configs.overrides").lsp_servers
 
 diagnostic.config {
@@ -9,16 +6,9 @@ diagnostic.config {
 }
 
 for _, lsp in ipairs(servers) do
-    local setup_table =
-        {
-            root_dir = require("lspconfig").util.root_pattern(".git")
-        }
+    vim.lsp.config[lsp] = {
+        root_markers = { ".git" }
+    }
 
-    -- if lsp == 'intelephense' then
-    --     table.insert(setup_table, {
-    --     })
-    -- end
-
-    lspconfig[lsp].setup(setup_table)
-
+    vim.lsp.enable(lsp)
 end
