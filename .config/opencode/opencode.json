@@ -11,7 +11,7 @@
     "agent": {
         "review": {
             "description": "Reviews code for best practices and potential issues",
-            "mode": "primary",
+            "mode": "subagent",
             "temperature": 0,
             "prompt": "{file:./prompts/reviewer.md}",
             "tools": {
@@ -21,11 +21,21 @@
         },
         "document": {
             "description": "Documentation generator",
-            "mode": "primary",
+            "mode": "subagent",
             "temperature": 0,
             "prompt": "{file:./prompts/documentation.md}",
             "tools": {
                 "edit": true
+            }
+        },
+        "debug": {
+            "description": "Expert debugger for investigating and identifying root causes of bugs",
+            "mode": "subagent",
+            "temperature": 0,
+            "prompt": "{file:./prompts/debugger.md}",
+            "tools": {
+                "write": false,
+                "edit": false
             }
         }
     },
