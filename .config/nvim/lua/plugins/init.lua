@@ -113,23 +113,12 @@ local plugins = {
     },
   },
   {
-    "Exafunction/codeium.vim",
-    event = "BufEnter",
+    "supermaven-inc/supermaven-nvim",
+    lazy = false,
     config = function()
-      -- Change '<C-g>' here to any keycode you like.
-      vim.g.codeium_disable_bindings = 1
-      vim.keymap.set("i", "<C-g>", function()
-        return vim.fn["codeium#Accept"]()
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-;>", function()
-        return vim.fn["codeium#CycleCompletions"](1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-,>", function()
-        return vim.fn["codeium#CycleCompletions"](-1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-x>", function()
-        return vim.fn["codeium#Clear"]()
-      end, { expr = true, silent = true })
+      require("supermaven-nvim").setup {
+        accept_suggestion = "<C-g>",
+      }
     end,
   },
   {
@@ -264,7 +253,14 @@ local plugins = {
       lazy = false,
       opts = {},
       keys = {
-        { "<leader>rr", function() require("refactoring").select_refactor() end, mode = { "n", "x" }, desc = "Refactor Select" },
+        {
+          "<leader>rr",
+          function()
+            require("refactoring").select_refactor()
+          end,
+          mode = { "n", "x" },
+          desc = "Refactor Select",
+        },
         { "<leader>re", ":Refactor extract ", mode = { "n", "x" }, desc = "Refactor Extract Function" },
         { "<leader>rf", ":Refactor extract_to_file ", mode = { "n", "x" }, desc = "Refactor Extract to File" },
         { "<leader>rv", ":Refactor extract_var ", mode = { "n", "x" }, desc = "Refactor Extract Variable" },
@@ -272,9 +268,30 @@ local plugins = {
         { "<leader>rI", ":Refactor inline_func", mode = "n", desc = "Refactor Inline Function" },
         { "<leader>rb", ":Refactor extract_block", mode = "n", desc = "Refactor Extract Block" },
         { "<leader>rbf", ":Refactor extract_block_to_file", mode = "n", desc = "Refactor Extract Block to File" },
-        { "<leader>rp", function() require("refactoring").debug.printf({ below = false }) end, mode = "n", desc = "Refactor Debug Printf" },
-        { "<leader>rdv", function() require("refactoring").debug.print_var() end, mode = { "x", "n" }, desc = "Refactor Debug Print Var" },
-        { "<leader>rc", function() require("refactoring").debug.cleanup({}) end, mode = "n", desc = "Refactor Debug Cleanup" },
+        {
+          "<leader>rp",
+          function()
+            require("refactoring").debug.printf { below = false }
+          end,
+          mode = "n",
+          desc = "Refactor Debug Printf",
+        },
+        {
+          "<leader>rdv",
+          function()
+            require("refactoring").debug.print_var()
+          end,
+          mode = { "x", "n" },
+          desc = "Refactor Debug Print Var",
+        },
+        {
+          "<leader>rc",
+          function()
+            require("refactoring").debug.cleanup {}
+          end,
+          mode = "n",
+          desc = "Refactor Debug Cleanup",
+        },
       },
     },
   },
