@@ -117,7 +117,9 @@ local plugins = {
     lazy = false,
     config = function()
       require("supermaven-nvim").setup {
-        accept_suggestion = "<C-g>",
+        keymaps = {
+          accept_suggestion = "<C-g>",
+        },
       }
     end,
   },
