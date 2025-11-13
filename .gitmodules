@@ -4,6 +4,3 @@
 [submodule ".tmux/plugins/tmux"]
 	path = .tmux/plugins/tmux
 	url = https://github.com/catppuccin/tmux.git
-[submodule ".config/ghostty/themes"]
-	path = .config/ghostty/themes
-	url = https://github.com/catppuccin/ghostty.git
