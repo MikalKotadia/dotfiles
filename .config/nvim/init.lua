@@ -37,3 +37,28 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- Force transparency after everything loads
+local function apply_transparency()
+  local groups = {
+    "Normal", "NormalFloat", "NormalNC", "SignColumn", 
+    "StatusLine", "StatusLineNC", "Folded", "FoldColumn",
+    "VertSplit", "NvimTreeNormal", "NvimTreeNormalNC",
+    "NvimTreeEndOfBuffer", "NvimTreeWinSeparator",
+    "TelescopeNormal", "TelescopeBorder",
+    "TabLine", "TabLineFill", "TabLineSel",
+    "TbLineBufOn", "TbLineBufOff", "TblineFill", "TbLineBufOnModified",
+    "TbBufLineBufOffModified", "TbBufLineBufOnClose", "TbBufLineBufOffClose"
+  }
+  for _, group in ipairs(groups) do
+    vim.api.nvim_set_hl(0, group, { bg = "none" })
+  end
+end
+
+vim.schedule(apply_transparency)
+
+-- Reapply when opening NvimTree
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "NvimTree",
+  callback = apply_transparency,
+})

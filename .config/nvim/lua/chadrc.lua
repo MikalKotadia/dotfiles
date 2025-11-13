@@ -5,7 +5,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "tokyonight",
+  theme = "catppuccin",
+  transparency = true,
 }
 
 return M

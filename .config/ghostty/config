@@ -1,0 +1,17 @@
+# Catppuccin Mocha Theme
+theme = catppuccin-mocha
+
+# Font configuration
+font-family = "Hack Nerd Font"
+font-size = 14
+
+# Window padding
+window-padding-x = 8
+window-padding-y = 8
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Shell
+shell-integration = detect
