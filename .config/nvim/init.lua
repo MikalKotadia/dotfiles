@@ -44,7 +44,7 @@ local function apply_transparency()
     "Normal", "NormalFloat", "NormalNC", "SignColumn", 
     "StatusLine", "StatusLineNC", "Folded", "FoldColumn",
     "VertSplit", "NvimTreeNormal", "NvimTreeNormalNC",
-    "NvimTreeEndOfBuffer", "NvimTreeWinSeparator",
+    "NvimTreeEndOfBuffer",
     "TelescopeNormal", "TelescopeBorder",
     "TabLine", "TabLineFill", "TabLineSel",
     "TbLineBufOn", "TbLineBufOff", "TblineFill", "TbLineBufOnModified",
@@ -53,6 +53,10 @@ local function apply_transparency()
   for _, group in ipairs(groups) do
     vim.api.nvim_set_hl(0, group, { bg = "none" })
   end
+  
+  -- Soften the nvim-tree vertical separator line
+  vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = "#2a2e38", bg = "none" })
+  vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#2a2e38", bg = "none" })
 end
 
 vim.schedule(apply_transparency)
