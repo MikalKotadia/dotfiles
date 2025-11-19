@@ -42,7 +42,8 @@ M.lsp_servers = {
     "twiggy_language_server",
     "bashls",
     "yamlls",
-    "vuels"
+    "vuels",
+    "emmet_language_server"
 }
 
 M.linters_by_ft = {
