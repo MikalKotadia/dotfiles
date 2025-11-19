@@ -46,5 +46,8 @@
             "enabled": true
         }
     },
-  "keybinds": {}
+  "keybinds": {
+        "session_child_cycle": "<leader>h",
+        "session_child_cycle_reverse": "<leader>l",
+    }
 }
