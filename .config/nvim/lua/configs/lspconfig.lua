@@ -5,10 +5,11 @@ diagnostic.config {
     update_in_insert = true,
 }
 
-for _, lsp in ipairs(servers) do
-    vim.lsp.config[lsp] = {
+for lsp, opts in pairs(servers) do
+    local config = vim.tbl_deep_extend("force", {
         root_markers = { ".git" }
-    }
+    }, opts)
 
+    vim.lsp.config[lsp] = config
     vim.lsp.enable(lsp)
 end

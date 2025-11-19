@@ -26,24 +26,24 @@ M.treesitter = {
 }
 
 M.lsp_servers = {
-    "html",
-    "cssls",
-    "ts_ls",
-    "clangd",
-    "pyright",
-    "marksman",
-    "texlab",
-    "intelephense",
-    "jdtls",
-    "dockerls",
-    "gopls",
-    "jsonls",
-    "lemminx",
-    "twiggy_language_server",
-    "bashls",
-    "yamlls",
-    "vuels",
-    "emmet_language_server"
+    html = { filetypes = { "html", "twig" } },
+    emmet_language_server = { filetypes = { "html", "twig" } },
+    cssls = {},
+    ts_ls = {},
+    clangd = {},
+    pyright = {},
+    marksman = {},
+    texlab = {},
+    intelephense = {},
+    jdtls = {},
+    dockerls = {},
+    gopls = {},
+    jsonls = {},
+    lemminx = {},
+    twiggy_language_server = {},
+    bashls = {},
+    yamlls = {},
+    vuels = {},
 }
 
 M.linters_by_ft = {
