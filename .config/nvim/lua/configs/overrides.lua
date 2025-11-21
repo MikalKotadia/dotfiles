@@ -31,7 +31,9 @@ M.lsp_servers = {
     cssls = {},
     ts_ls = {},
     clangd = {},
-    pyright = {},
+    basedpyright = {
+        root_markers = { "pyrightconfig.json", "pyproject.toml", ".git" },
+    },
     marksman = {},
     texlab = {},
     intelephense = {},
