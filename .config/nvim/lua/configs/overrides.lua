@@ -33,6 +33,9 @@ M.lsp_servers = {
     clangd = {},
     basedpyright = {
         root_markers = { "pyrightconfig.json", "pyproject.toml", ".git" },
+        on_attach = function(client, _)
+            client.server_capabilities.semanticTokensProvider = nil
+        end,
     },
     marksman = {},
     texlab = {},
