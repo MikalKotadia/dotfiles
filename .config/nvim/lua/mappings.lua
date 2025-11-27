@@ -34,8 +34,8 @@ vim.keymap.set("n", "<leader>fm", function()
 end, { desc = "Format with Conform" })
 
 map("v", "<leader>fm", function()
-    vim.lsp.buf.format { async = true }
-end, { desc = "LSP Format" })
+    require("conform").format({ async = true, lsp_fallback = true })
+end, { desc = "Format with Conform" })
 
 map("n", "gD", function()
     vim.lsp.buf.declaration()

@@ -6,10 +6,8 @@ local plugins = {
   {
     "stevearc/conform.nvim",
     lazy = true,
-    ft = vim.tbl_keys(overrides.linters_by_ft),
-    opts = {
-      formatters_by_ft = overrides.linters_by_ft,
-    },
+    ft = vim.tbl_keys(overrides.conform.formatters_by_ft),
+    opts = overrides.conform,
   },
 
   {
