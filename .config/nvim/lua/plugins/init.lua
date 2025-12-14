@@ -6,10 +6,8 @@ local plugins = {
   {
     "stevearc/conform.nvim",
     lazy = true,
-    ft = vim.tbl_keys(overrides.linters_by_ft),
-    opts = {
-      formatters_by_ft = overrides.linters_by_ft,
-    },
+    ft = vim.tbl_keys(overrides.conform.formatters_by_ft),
+    opts = overrides.conform,
   },
 
   {
@@ -38,6 +36,9 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
     opts = overrides.treesitter,
   },
 
@@ -152,150 +153,6 @@ local plugins = {
       require("tiny-inline-diagnostic").setup()
       vim.diagnostic.config { virtual_text = false } -- Only if needed in your configuration, if you already have native LSP diagnostics
     end,
-  },
-  {
-    "NickvanDyke/opencode.nvim",
-    dependencies = { "folke/snacks.nvim" },
-    keys = {
-      {
-        "<leader>oc",
-        function()
-          require("opencode").toggle()
-        end,
-        desc = "Toggle embedded opencode",
-      },
-      {
-        "<leader>oa",
-        function()
-          require("opencode").ask()
-        end,
-        desc = "Ask opencode",
-        mode = "n",
-      },
-      {
-        "<leader>oa",
-        function()
-          require("opencode").ask "@selection: "
-        end,
-        desc = "Ask opencode about selection",
-        mode = "v",
-      },
-      {
-        "<leader>op",
-        function()
-          require("opencode").select_prompt()
-        end,
-        desc = "Select prompt",
-        mode = { "n", "v" },
-      },
-      {
-        "<leader>on",
-        function()
-          require("opencode").command "session_new"
-        end,
-        desc = "New session",
-      },
-      {
-        "<leader>oy",
-        function()
-          require("opencode").command "messages_copy"
-        end,
-        desc = "Copy last message",
-      },
-      {
-        "<S-C-u>",
-        function()
-          require("opencode").command "messages_half_page_up"
-        end,
-        desc = "Scroll messages up",
-      },
-      {
-        "<S-C-d>",
-        function()
-          require("opencode").command "messages_half_page_down"
-        end,
-        desc = "Scroll messages down",
-      },
-    },
-  },
-  {
-    "sphamba/smear-cursor.nvim",
-    event = "VeryLazy",
-    opts = {
-      -- Smear cursor when switching buffers or windows.
-      smear_between_buffers = true,
-
-      -- Smear cursor when moving within line or to neighbor lines.
-      -- Use `min_horizontal_distance_smear` and `min_vertical_distance_smear` for finer control
-      smear_between_neighbor_lines = true,
-
-      -- Draw the smear in buffer space instead of screen space when scrolling
-      scroll_buffer_space = false,
-
-      -- Set to `true` if your font supports legacy computing symbols (block unicode symbols).
-      -- Smears will blend better on all backgrounds.
-      legacy_computing_symbols_support = false,
-
-      -- Smear cursor in insert mode.
-      -- See also `vertical_bar_cursor_insert_mode` and `distance_stop_animating_vertical_bar`.
-      smear_insert_mode = true,
-
-      cursor_color = "#9C4ADD",
-      trailing_stiffness = 0.25,
-      trailing_exponent = 5,
-      hide_target_hack = true,
-      gamma = 1,
-    },
-    {
-      "ThePrimeagen/refactoring.nvim",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-treesitter/nvim-treesitter",
-      },
-      lazy = false,
-      opts = {},
-      keys = {
-        {
-          "<leader>rr",
-          function()
-            require("refactoring").select_refactor()
-          end,
-          mode = { "n", "x" },
-          desc = "Refactor Select",
-        },
-        { "<leader>re", ":Refactor extract ", mode = { "n", "x" }, desc = "Refactor Extract Function" },
-        { "<leader>rf", ":Refactor extract_to_file ", mode = { "n", "x" }, desc = "Refactor Extract to File" },
-        { "<leader>rv", ":Refactor extract_var ", mode = { "n", "x" }, desc = "Refactor Extract Variable" },
-        { "<leader>ri", ":Refactor inline_var", mode = { "n", "x" }, desc = "Refactor Inline Variable" },
-        { "<leader>rI", ":Refactor inline_func", mode = "n", desc = "Refactor Inline Function" },
-        { "<leader>rb", ":Refactor extract_block", mode = "n", desc = "Refactor Extract Block" },
-        { "<leader>rbf", ":Refactor extract_block_to_file", mode = "n", desc = "Refactor Extract Block to File" },
-        {
-          "<leader>rp",
-          function()
-            require("refactoring").debug.printf { below = false }
-          end,
-          mode = "n",
-          desc = "Refactor Debug Printf",
-        },
-        {
-          "<leader>rdv",
-          function()
-            require("refactoring").debug.print_var()
-          end,
-          mode = { "x", "n" },
-          desc = "Refactor Debug Print Var",
-        },
-        {
-          "<leader>rc",
-          function()
-            require("refactoring").debug.cleanup {}
-          end,
-          mode = "n",
-          desc = "Refactor Debug Cleanup",
-        },
-      },
-    },
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
