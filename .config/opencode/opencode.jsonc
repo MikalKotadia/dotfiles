@@ -5,48 +5,11 @@
     "model": "anthropic/claude-sonnet-4-5-20250929",
     "layout": "stretch",
     "autoupdate": true,
-    "plugin": [
-        "opencode-gemini-auth"
-    ],
-    "provider": {
-        "google": {
-            "models": {
-                "gemini-3-pro-preview": {
-                    "options": {
-                        "thinkingConfig": {
-                            "includeThoughts": false
-                        }
-                    }
-                },
-                "gemini-2.5-flash": {
-                    "options": {
-                        "thinkingConfig": {
-                            "includeThoughts": false
-                        }
-                    }
-                }
-            }
-        }
-    },
     "permission": {
         "edit": "ask",
         "bash": "ask"
     },
     "agent": {
-        "general": {
-            "mode": "subagent",
-            // "model": "google/gemini-2.5-flash",
-        },
-        "review": {
-            "description": "Reviews code for best practices and potential issues",
-            "mode": "subagent",
-            "temperature": 0,
-            "prompt": "{file:./prompts/reviewer.md}",
-            "tools": {
-                "write": false,
-                "edit": false
-            }
-        },
         "document": {
             "description": "Documentation generator",
             "mode": "subagent",
