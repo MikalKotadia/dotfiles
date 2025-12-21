@@ -1,4 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "google_auth": true
+    "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+    "google_auth": true,
+    "agents": {
+        "librarian": {
+            "model": "google/gemini-2.5-flash"
+        }
+    }
 }
