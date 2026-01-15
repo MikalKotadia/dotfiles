@@ -1,6 +1,8 @@
 # Agent Instructions
 
-## Framework Documentation
 
-For ANY framework or library questions, use context7 to look up documentation.
-Review the subagents you have access to. It is essential that you use them (ie use general when looking for files, don't do it yourself)
+Use context7 ANYTIME you are wanting to use a language or library feature, that you may not be familiar with, or where patterns don't exist in the codebase.
+That include for adding a new library to confirm new versions.
+
+
+Anytime you want to ask the user a question, use the question tool. THIS IS IMPERATIVE.
