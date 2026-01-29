@@ -6,3 +6,4 @@ antigravity-accounts.json
 antigravity-signature-cache.json
 antigravity-logs/
 *.tmp
+antigravity-accounts.json.*.tmp
