@@ -5,7 +5,6 @@
     "oh-my-opencode-slim"
   ],
   "theme": "catppuccin",
-  "model": "openai/gpt-5.2-codex",
   "layout": "stretch",
   "autoupdate": true,
   "permission": {
