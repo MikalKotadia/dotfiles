@@ -6,3 +6,5 @@ That include for adding a new library to confirm new versions.
 
 
 Anytime you want to ask the user a question, use the question tool. THIS IS IMPERATIVE.
+
+ALWAYS create helper functions if you find yourself repeating code, whether new, or existing AS LONG as its not "1 line wrapper functions".
