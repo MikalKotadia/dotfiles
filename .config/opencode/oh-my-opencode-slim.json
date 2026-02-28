@@ -33,11 +33,11 @@
         "skills": [],
         "mcps": []
       },
-      "designer": {
-        "model": "google/antigravity-gemini-3-pro-high",
-        "skills": [
-          "agent-browser"
-        ],
+    "designer": {
+      "model": "google/antigravity-gemini-3.1-pro",
+      "skills": [
+        "agent-browser"
+      ],
         "mcps": []
       },
       "fixer": {
