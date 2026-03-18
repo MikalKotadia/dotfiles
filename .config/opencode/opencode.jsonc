@@ -4,7 +4,6 @@
     "opencode-antigravity-auth@latest",
     "oh-my-opencode-slim"
   ],
-  "theme": "catppuccin",
   "layout": "stretch",
   "autoupdate": true,
   "permission": {
@@ -18,10 +17,6 @@
       "url": "https://mcp.context7.com/mcp",
       "enabled": true
     }
-  },
-  "keybinds": {
-    "session_child_cycle": "<leader>right",
-    "session_child_cycle_reverse": "<leader>left"
   },
   "provider": {
     "google": {
