@@ -3,7 +3,7 @@
   "plugin": [
     "opencode-antigravity-auth@latest",
     "oh-my-opencode-slim",
-    "opencode-mermaid-renderer@0.0.1"
+    "opencode-mermaid-renderer@0.0.3"
   ],
   "layout": "stretch",
   "autoupdate": true,
