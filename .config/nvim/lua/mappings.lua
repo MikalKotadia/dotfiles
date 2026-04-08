@@ -3,11 +3,6 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "Enter command mode" })
 map("v", ">", ">gv", { desc = "indent" })
-
-
-
-map("n", "<leader>lg", ":LazyGit<cr>", { desc = "Open LazyGit" })
-
 -- Telescope
 map("n", "<leader>fs", function()
     require('telescope.builtin').lsp_document_symbols({ symbols = { 'function', 'class', 'method' } })
