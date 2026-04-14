@@ -3,23 +3,27 @@
   "presets": {
     "openai": {
       "orchestrator": {
-        "model": "openai/gpt-5.4",
+        "model": "openai/gpt-5.3-codex",
         "variant": "low",
         "skills": [
           "*"
         ],
         "mcps": [
-          "websearch"
+          "websearch",
+          "context7"
         ]
       },
       "oracle": {
-        "model": "openai/gpt-5.4",
+        "model": "openai/gpt-5.4-codex",
         "variant": "high",
         "skills": [],
-        "mcps": []
+        "mcps": [
+          "websearch",
+          "context7"
+        ]
       },
       "librarian": {
-        "model": "openai/gpt-5.1-codex-mini",
+        "model": "openai/gpt-5.4-mini",
         "variant": "low",
         "skills": [],
         "mcps": [
@@ -29,7 +33,7 @@
         ]
       },
       "explorer": {
-        "model": "openai/gpt-5.1-codex-mini",
+        "model": "openai/gpt-5.4-mini",
         "skills": [],
         "mcps": []
       },
