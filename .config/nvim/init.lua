@@ -29,8 +29,14 @@ require("lazy").setup({
 }, lazy_config)
 
 -- load theme
-dofile(vim.g.base46_cache .. "defaults")
-dofile(vim.g.base46_cache .. "statusline")
+local function safe_dofile(path)
+  if vim.loop.fs_stat(path) then
+    dofile(path)
+  end
+end
+
+safe_dofile(vim.g.base46_cache .. "defaults")
+safe_dofile(vim.g.base46_cache .. "statusline")
 
 require "nvchad.autocmds"
 

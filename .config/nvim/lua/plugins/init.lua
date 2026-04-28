@@ -36,10 +36,23 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
+    build = ":TSUpdate",
+    config = function()
+      require("configs.treesitter").setup()
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    branch = "main",
+    lazy = false,
     dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects",
+      "nvim-treesitter/nvim-treesitter",
     },
-    opts = overrides.treesitter,
+    config = function()
+      require("configs.treesitter_textobjects").setup()
+    end,
   },
 
   {
@@ -51,6 +64,12 @@ local plugins = {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      return require "configs.cmp"
     end,
   },
 
