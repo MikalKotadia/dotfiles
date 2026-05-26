@@ -1,8 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
-    "oh-my-opencode-slim",
-    "opencode-mermaid-renderer@0.0.3"
+    "opencode-mermaid-renderer@0.0.3",
+    "oh-my-opencode-slim"
   ],
   "layout": "stretch",
   "autoupdate": true,
@@ -18,8 +18,7 @@
       "enabled": true
     }
   },
-  "provider": {
-  },
+  "provider": {},
   "agent": {
     "explore": {
       "disable": true
@@ -27,5 +26,6 @@
     "general": {
       "disable": true
     }
-  }
+  },
+  "lsp": true
 }

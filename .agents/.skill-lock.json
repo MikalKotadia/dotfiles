@@ -19,6 +19,15 @@
       "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
       "installedAt": "2026-05-08T14:35:22.430Z",
       "updatedAt": "2026-05-08T14:35:22.430Z"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "skillFolderHash": "c1470a475a0472fceda2401ea6763708a91680a8",
+      "installedAt": "2026-05-26T14:27:37.220Z",
+      "updatedAt": "2026-05-26T14:27:37.220Z"
     }
   },
   "dismissed": {

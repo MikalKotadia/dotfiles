@@ -118,6 +118,7 @@ local plugins = {
     lazy = false,
     config = function()
       require("supermaven-nvim").setup {
+        ignore_filetypes = { "csv", ".env", ".secrets" },
         keymaps = {
           accept_suggestion = "<C-g>",
         },
