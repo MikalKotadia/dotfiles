@@ -8,6 +8,10 @@
     </important>
 
     <important>
-        AGGRESSIVELY DELEGATE tasks to both sub-agents and background agents. ANYTIME we have a front-end and back-end change, derive a shared spec, then delegate BACKGROUND agents to implement the changes to the spec.
+        AGGRESSIVELY DELEGATE tasks to sub-agents. ANYTIME we have a front-end and back-end change, derive a shared spec, then delegate agents to implement the changes to the spec.
+    </important>
+
+    <important>
+        If you ever need to run python, ALWAYS use uv and with to include any required libraries.
     </important>
 </systeminstructions>
