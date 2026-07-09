@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-09T21:12:55.281Z",
+  "skills": {
+    "simplify": {
+      "status": "conflict",
+      "packageVersion": "2.1.0",
+      "sourceHash": "3dbfe351c0cf70cdacc9cd576b50ac87c47c4b1b06ebc40ec33590b149d7f616",
+      "lastManagedHash": "",
+      "lastSeenHash": "",
+      "updatedAt": "2026-07-09T21:12:55.249Z"
+    },
+    "codemap": {
+      "status": "customized",
+      "packageVersion": "2.1.0",
+      "sourceHash": "d1f6c86212b4550b68096021266ecdbb0d788ad59b4673bb5658ca4b49251a9b",
+      "lastManagedHash": "",
+      "lastSeenHash": "b7abed1aad2ac0fca6c87eca1ebbd16480c9fac2afa23283a4fb721434c10b97",
+      "stagedPath": "/Users/mikalkotdia/.config/opencode/.oh-my-opencode-slim/skill-updates/2.1.0/codemap",
+      "updatedAt": "2026-07-09T21:12:55.268Z"
+    },
+    "clonedeps": {
+      "status": "customized",
+      "packageVersion": "2.1.0",
+      "sourceHash": "80a3bf35d3561b316c7882361716566259c3b2f4750e409093a5158655dfd69b",
+      "lastManagedHash": "",
+      "lastSeenHash": "85dfe902610ec00ec8c3ff2d0f7b5210ff86b870d27a9684d91aac522c5732fc",
+      "stagedPath": "/Users/mikalkotdia/.config/opencode/.oh-my-opencode-slim/skill-updates/2.1.0/clonedeps",
+      "updatedAt": "2026-07-09T21:12:55.271Z"
+    },
+    "deepwork": {
+      "status": "managed",
+      "packageVersion": "2.1.0",
+      "sourceHash": "2306f537ec38b7b73265b42c996044bc06ce2a1da976fad75885b63039226b28",
+      "lastManagedHash": "2306f537ec38b7b73265b42c996044bc06ce2a1da976fad75885b63039226b28",
+      "lastSeenHash": "2306f537ec38b7b73265b42c996044bc06ce2a1da976fad75885b63039226b28",
+      "updatedAt": "2026-07-09T21:12:55.277Z"
+    },
+    "reflect": {
+      "status": "managed",
+      "packageVersion": "2.1.0",
+      "sourceHash": "3ee1c08d65a0145547ab54efe72b3277c5ae76c78396ba6f030ebaa2e776944a",
+      "lastManagedHash": "3ee1c08d65a0145547ab54efe72b3277c5ae76c78396ba6f030ebaa2e776944a",
+      "lastSeenHash": "3ee1c08d65a0145547ab54efe72b3277c5ae76c78396ba6f030ebaa2e776944a",
+      "updatedAt": "2026-07-09T21:12:55.279Z"
+    },
+    "oh-my-opencode-slim": {
+      "status": "managed",
+      "packageVersion": "2.1.0",
+      "sourceHash": "756ef3c8ed9309f2b534cc27fadc21d89b3419a7bcf4c8869c31e9ad3a1912ad",
+      "lastManagedHash": "756ef3c8ed9309f2b534cc27fadc21d89b3419a7bcf4c8869c31e9ad3a1912ad",
+      "lastSeenHash": "756ef3c8ed9309f2b534cc27fadc21d89b3419a7bcf4c8869c31e9ad3a1912ad",
+      "updatedAt": "2026-07-09T21:12:55.280Z"
+    },
+    "release-smoke-test": {
+      "status": "managed",
+      "packageVersion": "2.1.0",
+      "sourceHash": "ff5f6a0af911a349d50800b682d50ccfb2c2945a0169192e15d45809afafc7b9",
+      "lastManagedHash": "ff5f6a0af911a349d50800b682d50ccfb2c2945a0169192e15d45809afafc7b9",
+      "lastSeenHash": "ff5f6a0af911a349d50800b682d50ccfb2c2945a0169192e15d45809afafc7b9",
+      "updatedAt": "2026-07-09T21:12:55.280Z"
+    },
+    "worktrees": {
+      "status": "managed",
+      "packageVersion": "2.1.0",
+      "sourceHash": "565f3d29c33fdd7d74a5c7ec4f3107b918281cbf82d20ba103baae056bbc063c",
+      "lastManagedHash": "565f3d29c33fdd7d74a5c7ec4f3107b918281cbf82d20ba103baae056bbc063c",
+      "lastSeenHash": "565f3d29c33fdd7d74a5c7ec4f3107b918281cbf82d20ba103baae056bbc063c",
+      "updatedAt": "2026-07-09T21:12:55.281Z"
+    }
+  }
+}
