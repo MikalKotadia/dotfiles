@@ -39,7 +39,7 @@
         "mcps": []
       },
     "designer": {
-      "model": "openai/gpt-5.6",
+      "model": "openai/gpt-5.6-terra",
       "variant": "medium",
       "skills": [
         "agent-browser"
