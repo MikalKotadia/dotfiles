@@ -1,0 +1,5 @@
+# Catppuccin Mocha chrome with GitHub's blue/orange colorblind diff cues.
+theme = "catppuccin-mocha-colorblind"
+
+# Preserve the theme's intended contrast instead of inheriting the terminal background.
+transparent_background = false
