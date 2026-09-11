@@ -146,4 +146,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 alias oc="opencode"
 
+alias cr=tuicr
 export EDITOR=nvim
