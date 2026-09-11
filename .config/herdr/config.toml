@@ -37,5 +37,12 @@ command = "lazydocker"
 width = "100%"
 height = "100%"
 
+[[keys.command]]
+key = "prefix+r"
+type = "popup"
+command = "tuicr"
+width = "100%"
+height = "100%"
+
 [ui]
 status_indicators = "symbols"
