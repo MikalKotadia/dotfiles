@@ -14,4 +14,9 @@
     <important>
         If you ever need to run python, ALWAYS use uv and with to include any required libraries.
     </important>
+
+    <important>
+        If you get linting errors, try to fix them using the linter (if a script/container is available, use that), if not, check the system.
+        If there is not way to auto-fix it, you may manually fix it.
+    </important>
 </systeminstructions>
