@@ -1,0 +1,10 @@
+/.config/herdr/.plugins.lock
+/.config/herdr/*.sock
+/.config/herdr/herdr*.log*
+/.config/herdr/session.json
+/.config/herdr/session.json.tmp
+/.config/herdr/session-history.json
+/.config/herdr/session-history.json.tmp
+/.config/opencode/herdr-tui-session.js
+/.config/opencode/plugins/herdr-agent-state.js
+/.config/opencode/tui.jsonc
