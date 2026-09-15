@@ -16,3 +16,6 @@ cursor-style-blink = false
 # Shell
 shell-integration = detect
 shell-integration-features = ssh-terminfo,ssh-env
+
+# Allow terminal applications such as OpenCode to dispatch macOS notifications
+desktop-notifications = true
