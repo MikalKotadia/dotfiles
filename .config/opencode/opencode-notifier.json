@@ -1,0 +1,45 @@
+{
+  "notificationSystem": "osascript",
+  "suppressWhenFocused": true,
+  "enableOnDesktop": false,
+  "sound": false,
+  "bell": false,
+  "notification": false,
+  "command": {
+    "enabled": false,
+    "path": "",
+    "minDuration": 0
+  },
+  "events": {
+    "permission": {
+      "notification": true,
+      "sound": false,
+      "bell": false,
+      "command": false
+    },
+    "complete": {
+      "notification": true,
+      "sound": false,
+      "bell": false,
+      "command": false
+    },
+    "subagent_complete": {
+      "notification": false,
+      "sound": false,
+      "bell": false,
+      "command": false
+    },
+    "error": {
+      "notification": true,
+      "sound": false,
+      "bell": false,
+      "command": false
+    },
+    "question": {
+      "notification": true,
+      "sound": false,
+      "bell": false,
+      "command": false
+    }
+  }
+}

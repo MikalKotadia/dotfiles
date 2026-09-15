@@ -3,7 +3,8 @@
   "theme": "catppuccin",
   "attention": {
     "enabled": true,
-    "notifications": true
+    "notifications": false,
+    "sound": true
   },
   "keybinds": {
     "session_child_cycle": "<leader>right",
