@@ -1,5 +1,10 @@
 {
   "preset": "openai",
+  "backgroundJobs": {
+    "orchestratorWake": {
+      "enabled": false
+    }
+  },
   "presets": {
     "openai": {
       "orchestrator": {
