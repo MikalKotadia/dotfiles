@@ -98,6 +98,7 @@ M.lsp_servers = {
 
 M.linters_by_ft = {
         -- lua = { "stylua" },
+        astro = { "eslint_d" },
         javascript = { "eslint_d" },
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
@@ -108,10 +109,11 @@ M.linters_by_ft = {
 M.conform = {
     formatters_by_ft = {
         -- lua = { "stylua" },
-        javascript = { "eslint_d" },
-        typescript = { "eslint_d" },
-        javascriptreact = { "eslint_d" },
-        typescriptreact = { "eslint_d" },
+        astro = { "prettier" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
         python = { "ruff_organize_imports", "ruff_format" },
     },
     formatters = {
