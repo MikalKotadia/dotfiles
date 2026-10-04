@@ -8,6 +8,7 @@
   "layout": "stretch",
   "autoupdate": true,
   "tools": {
+    "auto_continue": false,
     "background_task": false,
     "background_output": false,
     "background_cancel": false
