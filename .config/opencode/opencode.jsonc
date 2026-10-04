@@ -3,7 +3,7 @@
   "plugin": [
     "opencode-mermaid-renderer@0.0.3",
     "@mohak34/opencode-notifier@0.2.8",
-    "oh-my-opencode-slim@2.2.20"
+    "oh-my-opencode-slim"
   ],
   "layout": "stretch",
   "autoupdate": true,
