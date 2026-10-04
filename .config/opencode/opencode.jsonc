@@ -7,6 +7,11 @@
   ],
   "layout": "stretch",
   "autoupdate": true,
+  "tools": {
+    "background_task": false,
+    "background_output": false,
+    "background_cancel": false
+  },
   "permission": {
     "edit": "ask",
     "bash": "ask",
