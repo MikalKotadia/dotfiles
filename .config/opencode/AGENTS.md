@@ -8,7 +8,7 @@
     </important>
 
     <important>
-        AGGRESSIVELY DELEGATE tasks to sub-agents. ANYTIME we have a front-end and back-end change, derive a shared spec, then delegate agents to implement the changes to the spec. ALWAYS use background agents.
+        AGGRESSIVELY DELEGATE tasks to sub-agents. ANYTIME we have a front-end and back-end change, derive a shared spec, then delegate agents to implement the changes to the spec. ALWAYS use background agents. If you don't have a specific thing to do while a background agent is working, just pause, don't do meaningless actions to kill time.
     </important>
 
     <important>
