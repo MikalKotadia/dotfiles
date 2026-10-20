@@ -3,7 +3,10 @@
   "theme": {
     "name": "catppuccin"
   },
-  "keybinds": {},
+  "keybinds": {
+    "session.child.next": "<leader>right",
+    "session.child.previous": "<leader>left"
+  },
   "plugins": [
     "oh-my-opencode-slim",
     "opencode-vim@latest"
