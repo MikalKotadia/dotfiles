@@ -5,7 +5,13 @@
   },
   "keybinds": {
     "session.child.next": "<leader>right",
-    "session.child.previous": "<leader>left"
+    "session.child.previous": "<leader>left",
+    "session.background": "<leader>z",
+    "input.move.left": "left",
+    "diff.page.up": "pageup"
+  },
+  "tabs": {
+    "mode": "off"
   },
   "plugins": [
     "oh-my-opencode-slim",
@@ -15,5 +21,8 @@
     "enabled": true,
     "notifications": false,
     "sound": true
+  },
+  "prompt": {
+    "image_preview": true
   }
 }
