@@ -13,6 +13,8 @@ M.treesitter = {
         "vim",
         "lua",
         "html",
+        "astro",
+        "htmldjango",
         "css",
         "javascript",
         "typescript",

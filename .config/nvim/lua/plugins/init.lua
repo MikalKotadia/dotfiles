@@ -72,6 +72,13 @@ local plugins = {
       return require "configs.cmp"
     end,
   },
+  {
+    "ConnorOnTheWeb/alpinejs.nvim",
+    -- Register injection queries before the FileType autocmd starts Tree-sitter.
+    lazy = false,
+    dependencies = { "nvim-treesitter/nvim-treesitter", "hrsh7th/nvim-cmp" },
+    opts = {},
+  },
 
   {
     "kylechui/nvim-surround",
