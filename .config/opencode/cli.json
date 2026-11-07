@@ -3,6 +3,9 @@
   "theme": {
     "name": "catppuccin"
   },
+  "tabs": {
+    "mode": "off"
+  },
   "keybinds": {
     "session.child.next": "<leader>right",
     "session.child.previous": "<leader>left",
@@ -24,5 +27,8 @@
   },
   "prompt": {
     "image_preview": true
+  },
+  "session": {
+    "sidebar": "auto"
   }
 }
