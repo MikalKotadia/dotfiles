@@ -1,0 +1,21 @@
+# Minimal Catppuccin Mocha prompt: last two path components, branch, dirty dot, $.
+format = '$directory$git_branch$git_status$character'
+add_newline = false
+
+[directory]
+format = '[$path](fg:#89b4fa)'
+truncation_length = 2
+truncation_symbol = ''
+truncate_to_repo = false
+home_symbol = '~'
+
+[git_branch]
+format = '  [$branch](fg:#a6e3a1)'
+
+[git_status]
+format = '([ ●](fg:#f38ba8))'
+ignore_submodules = true
+
+[character]
+success_symbol = ' [\$](fg:#89b4fa) '
+error_symbol = ' [\$](fg:#89b4fa) '
