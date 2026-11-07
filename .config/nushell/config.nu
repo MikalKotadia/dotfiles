@@ -3,6 +3,7 @@ $env.config.edit_mode = 'vi'
 
 alias newdb = nvim ~/.config/gobang/config.toml
 alias nv = nvim .
+alias la = ls -a
 alias ytdl = yt-dlp
 def erc [] { nvim $nu.config-path }
 def epr [] { nvim $nu.env-path }
