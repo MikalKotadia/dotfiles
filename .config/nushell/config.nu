@@ -12,6 +12,16 @@ alias ld = lazydocker
 alias oc = opencode
 alias cr = tuicr
 
+# Keep Nushell's file reader available before overriding open on macOS.
+alias nu-open = open
+def --wrapped open [...args: string] {
+    if (sys host | get name) == 'Darwin' {
+        ^/usr/bin/open ...$args
+    } else {
+        nu-open ...$args
+    }
+}
+
 def reload [] {
     exec nu --env-config $nu.env-path --config $nu.config-path -l
 }
