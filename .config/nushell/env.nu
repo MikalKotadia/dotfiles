@@ -14,4 +14,4 @@ if $nu.os-info.name == 'linux' and ($snap_bin | path exists) and ($snap_bin not-
 # Export any required values explicitly or use a trusted Nushell-only secrets loader.
 
 # Generate the script before config.nu is loaded.
-zoxide init nushell | save -f ~/.zoxide.nu
+zoxide init --cmd cd nushell | save -f ~/.zoxide.nu
