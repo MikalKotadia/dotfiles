@@ -38,4 +38,4 @@ if $nu.os-info.name == 'linux' and ($snap_bin | path exists) and ($snap_bin not-
 if '__zoxide_hooked' in $env { hide-env __zoxide_hooked }
 
 # Generate the script before config.nu is loaded.
-zoxide init nushell | save -f ~/.zoxide.nu
+zoxide init --cmd cd nushell | save -f ~/.zoxide.nu
