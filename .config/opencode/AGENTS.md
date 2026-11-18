@@ -23,4 +23,8 @@
         When writing code, seperate logical blocks with one new line.
     </important>
 
+    <important>
+        If you are providing commands to a user, note that the chosen shell is nushell. This does not impact your bash tool.
+    </important>
+
 </systeminstructions>
