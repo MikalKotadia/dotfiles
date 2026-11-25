@@ -171,6 +171,12 @@ local plugins = {
     opts = {},
   },
   {
+    "cavanaug/render-markdown-mermaid.nvim",
+    dependencies = { "MeanderingProgrammer/render-markdown.nvim" },
+    ft = { "markdown" },
+    opts = { auto_setup_render_markdown = false },
+  },
+  {
     "johmsalas/text-case.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
