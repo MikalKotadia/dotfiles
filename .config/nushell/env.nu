@@ -6,6 +6,12 @@ $env.OPENCODE_ENABLE_EXA = '1'
 $env.NVM_DIR = ($env.HOME | path join '.nvm')
 $env.PATH = ($env.PATH | append ($env.HOME | path join 'go/bin'))
 $env.PATH = ($env.PATH | append ($env.HOME | path join '/Users/mikalkotadia/.local/bin'))
+let pyenv_root = ($env.HOME | path join '.pyenv')
+$env.PYENV_ROOT = $pyenv_root
+let pyenv_shims = ($pyenv_root | path join 'shims')
+if ($pyenv_shims | path exists) and ($pyenv_shims not-in $env.PATH) {
+    $env.PATH = ($env.PATH | prepend $pyenv_shims)
+}
 let opencode_bin = ($env.HOME | path join '.opencode/bin')
 if ($opencode_bin | path exists) and ($opencode_bin not-in $env.PATH) {
     $env.PATH = ($env.PATH | append $opencode_bin)
