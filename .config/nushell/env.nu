@@ -5,6 +5,7 @@ $env.OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS = 'true'
 $env.OPENCODE_ENABLE_EXA = '1'
 $env.NVM_DIR = ($env.HOME | path join '.nvm')
 $env.PATH = ($env.PATH | append ($env.HOME | path join 'go/bin'))
+$env.PATH = ($env.PATH | append ($env.HOME | path join '/Users/mikalkotadia/.local/bin'))
 let opencode_bin = ($env.HOME | path join '.opencode/bin')
 if ($opencode_bin | path exists) and ($opencode_bin not-in $env.PATH) {
     $env.PATH = ($env.PATH | append $opencode_bin)
